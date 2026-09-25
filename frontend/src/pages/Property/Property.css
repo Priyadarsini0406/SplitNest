@@ -1,0 +1,312 @@
+.property-details-page-wrapper {
+  background-color: #0b0f19;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  color: #f8fafc;
+}
+
+.property-details-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Glow Blobs */
+.property-details-page-wrapper .bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.property-details-page-wrapper .bg-glow-primary {
+  background: radial-gradient(circle, #4f46e5 0%, rgba(79, 70, 229, 0) 70%);
+  top: 10%;
+  left: -100px;
+}
+
+.property-details-page-wrapper .bg-glow-secondary {
+  background: radial-gradient(circle, #14b8a6 0%, rgba(20, 184, 166, 0) 70%);
+  bottom: 20%;
+  right: -100px;
+}
+
+/* Back navigation link */
+.back-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  font-size: 1.05rem;
+}
+
+.back-link:hover {
+  color: #14b8a6;
+  transform: translateX(-4px);
+}
+
+/* Image Showcase */
+.property-details-image-holder {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  height: 420px;
+}
+
+.property-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.property-details-image-holder:hover .property-main-img {
+  transform: scale(1.03);
+}
+
+.details-featured-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 16px !important;
+  font-size: 0.9rem !important;
+  border-radius: 10px !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.details-score-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(13, 148, 136, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+/* Glassmorphic cards */
+.details-glass-card {
+  background: rgba(30, 41, 59, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.details-glass-card hr {
+  opacity: 0.2;
+}
+
+.text-dark-heading {
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rating-badge-large .stars {
+  color: #f59e0b;
+}
+
+/* Specification Badges */
+.spec-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  min-width: 100px;
+  transition: background 0.3s ease;
+}
+
+.spec-badge:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Flatmate card */
+.flatmate-detail-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.25s ease;
+}
+
+.flatmate-detail-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+}
+
+.flatmate-avatar-large {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+  color: #fff;
+  display: flex;
+  alignItems: center;
+  justifyContent: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
+}
+
+/* Checkout Sidebar Widget */
+.checkout-widget-card {
+  background: rgba(30, 41, 59, 0.6) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.checkout-widget-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5 0%, #14b8a6 100%);
+  border-radius: 24px 24px 0 0;
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 90px;
+  z-index: 10;
+}
+
+/* Primary Booking Button */
+.btn-booking-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%) !important;
+  border: none !important;
+  border-radius: 14px !important;
+  color: #ffffff !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4) !important;
+}
+
+.btn-booking-primary:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.55) !important;
+}
+
+.btn-booking-primary:active {
+  transform: translateY(0) !important;
+}
+
+/* Booking Actions (Save & Compare) */
+.btn-booking-action {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 12px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-booking-action:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+/* Schedule Visit Button */
+.btn-booking-secondary {
+  background: rgba(20, 184, 166, 0.1) !important;
+  border: 1px solid rgba(20, 184, 166, 0.4) !important;
+  color: #14b8a6 !important;
+  border-radius: 12px !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-booking-secondary:hover {
+  background: rgba(20, 184, 166, 0.2) !important;
+  border-color: #14b8a6 !important;
+  color: #2dd4bf !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Owner Details Block */
+.owner-profile {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+}
+
+.owner-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* Toast styling override */
+.z-index-toast {
+  z-index: 1055 !important;
+}
+
+.glass-toast {
+  background: rgba(30, 27, 75, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px !important;
+}
+
+.glass-toast-header {
+  background: rgba(79, 70, 229, 0.3) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+}
+
+.glass-toast-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* Visit schedule dialog customization */
+.visit-modal-content {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+}
+
+.visit-custom-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+}
+
+.visit-custom-input:focus {
+  border-color: #14b8a6 !important;
+  box-shadow: 0 0 0 0.25rem rgba(20, 184, 166, 0.25) !important;
+}

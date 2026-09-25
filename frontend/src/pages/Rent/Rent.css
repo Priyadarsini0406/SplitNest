@@ -1,0 +1,40 @@
+/* SplitNest Rent Page styling */
+
+.rent-page-wrapper {
+  background-color: var(--color-bg, #F8FAFC);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.rent-card-glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+}
+
+.rent-heading {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  color: var(--color-heading, #0F172A);
+  letter-spacing: -1px;
+}
+
+.rent-subtext {
+  color: var(--color-text, #475569);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.rent-visual-stub {
+  height: 180px;
+  border-radius: 12px;
+  border: 2px dashed rgba(79, 70, 229, 0.15);
+  background: rgba(79, 70, 229, 0.02);
+  color: var(--color-primary, #4F46E5);
+  font-weight: 600;
+  font-size: 0.95rem;
+}

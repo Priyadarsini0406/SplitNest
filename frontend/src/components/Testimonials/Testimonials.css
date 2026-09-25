@@ -1,0 +1,284 @@
+/* SplitNest Testimonials Section styling */
+
+.testimonials-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Background glows */
+.testi-glow-1 {
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.testi-glow-2 {
+  position: absolute;
+  bottom: -10%;
+  right: 20%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+/* Header style block */
+.testimonials-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 64px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testi-tag {
+  display: inline-block;
+  background: rgba(79, 70, 229, 0.06);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  color: var(--color-primary, #4F46E5);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.testi-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  letter-spacing: -1px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.testi-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.1rem;
+  color: var(--color-text, #475569);
+  line-height: 1.6;
+}
+
+/* Carousel container overrides */
+.testi-carousel {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 60px; /* Space for customized indicators */
+}
+
+/* Glass card layout */
+.testi-card-glass {
+  position: relative;
+  width: 100%;
+  padding: 60px;
+  background: rgba(248, 250, 252, 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.03),
+              0 1px 3px rgba(15, 23, 42, 0.01);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  cursor: grab;
+}
+
+.testi-card-glass:active {
+  cursor: grabbing;
+}
+
+.testi-card-glass:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(79, 70, 229, 0.15);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+}
+
+/* Giant background quote mark */
+.quote-mark-back {
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 10rem;
+  font-weight: 800;
+  color: rgba(79, 70, 229, 0.05);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Testimonial Stars ratings */
+.testi-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.testi-star-icon {
+  color: var(--color-accent, #F59E0B);
+  fill: var(--color-accent, #F59E0B);
+  font-size: 1.1rem;
+}
+
+/* Testimonial Text review body */
+.testi-text {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--color-text, #475569);
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile container metadata */
+.testi-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Rounded initials avatar */
+.testi-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Avatar specific colors */
+.avatar-teal {
+  background: linear-gradient(135deg, var(--color-secondary, #14B8A6) 0%, #0D9488 100%);
+}
+
+.avatar-indigo {
+  background: linear-gradient(135deg, var(--color-primary, #4F46E5) 0%, #3730A3 100%);
+}
+
+.avatar-amber {
+  background: linear-gradient(135deg, var(--color-accent, #F59E0B) 0%, #D97706 100%);
+}
+
+.testi-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testi-name {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  margin-bottom: 2px;
+}
+
+.testi-occupation {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  color: var(--color-text, #475569);
+  font-weight: 500;
+}
+
+/* CUSTOM CAROUSEL INDICATORS OVERRIDES */
+.testi-carousel .carousel-indicators {
+  margin-bottom: -10px;
+  gap: 8px;
+}
+
+.testi-carousel .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(71, 85, 105, 0.2);
+  border: none;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.testi-carousel .carousel-indicators .active {
+  width: 28px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, var(--color-primary, #4F46E5) 0%, var(--color-secondary, #14B8A6) 100%);
+  opacity: 1;
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+
+@media (max-width: 991.98px) {
+  .testi-title {
+    font-size: 2.35rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .testi-card-glass {
+    padding: 40px 30px;
+    border-radius: 20px;
+  }
+  
+  .testi-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .quote-mark-back {
+    font-size: 7rem;
+    left: 16px;
+    top: -5px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .testimonials-section {
+    padding: 80px 0;
+  }
+
+  .testi-title {
+    font-size: 1.85rem;
+  }
+
+  .testi-card-glass {
+    padding: 30px 20px;
+  }
+  
+  .testi-text {
+    font-size: 0.95rem;
+  }
+
+  .testi-avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+
+  .testi-name {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,371 @@
+/* SplitNest How It Works styling */
+
+.how-it-works-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Background glows */
+.hiw-glow-top {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.04) 0%, rgba(20, 184, 166, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hiw-glow-bottom {
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.04) 0%, rgba(79, 70, 229, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header styling */
+.how-it-works-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hiw-tag {
+  display: inline-block;
+  background: rgba(20, 184, 166, 0.06);
+  border: 1px solid rgba(20, 184, 166, 0.12);
+  color: var(--color-secondary, #14B8A6);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hiw-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  letter-spacing: -1px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.hiw-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.1rem;
+  color: var(--color-text, #475569);
+  line-height: 1.6;
+}
+
+/* Timeline components */
+.timeline-container {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  z-index: 2;
+}
+
+/* Central track line (Desktop horizontal line) */
+.timeline-line {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: rgba(226, 232, 240, 0.6);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Colored progress gradient line overlaying the track */
+.timeline-line-progress {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary, #4F46E5) 0%, var(--color-secondary, #14B8A6) 100%);
+  opacity: 0.85;
+}
+
+/* Custom row & column positioning */
+.timeline-row {
+  position: relative;
+  z-index: 2;
+  margin: 0 -10px;
+}
+
+.timeline-col {
+  padding: 0 10px;
+}
+
+.timeline-node-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Step large background text */
+.step-number-container {
+  position: absolute;
+  top: -30px;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: rgba(79, 70, 229, 0.07);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Connecting Dot on the timeline track */
+.timeline-connector-dot {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid rgba(226, 232, 240, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 92px; /* Centers dot exactly on the 100px horizontal line */
+  margin-bottom: 24px;
+  z-index: 3;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+}
+
+.connector-dot-inner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(226, 232, 240, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Content Glass Card */
+.timeline-card-content {
+  width: 100%;
+  padding: 24px 20px;
+  background: rgba(248, 250, 252, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.01);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Step Small Icon Circle */
+.step-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(71, 85, 105, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--color-primary, #4F46E5);
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.step-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text, #475569);
+  margin-bottom: 0;
+}
+
+/* TIMELINE HOVER EFFECTS */
+.timeline-node-card:hover .timeline-card-content {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(79, 70, 229, 0.2);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.05);
+}
+
+.timeline-node-card:hover .timeline-connector-dot {
+  border-color: var(--color-primary, #4F46E5);
+  box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.15);
+  transform: scale(1.15);
+}
+
+.timeline-node-card:hover .connector-dot-inner {
+  background: var(--color-primary, #4F46E5);
+}
+
+.timeline-node-card:hover .step-icon-wrapper {
+  background: var(--color-primary, #4F46E5);
+  color: #ffffff;
+  transform: rotate(-6deg) scale(1.05);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.timeline-node-card:hover .step-number-container {
+  color: rgba(79, 70, 229, 0.14);
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* FADE-UP ANIMATIONS */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+.delay-5 { animation-delay: 0.7s; }
+
+@keyframes fadeUpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE LAYOUT TIMELINE TRANSFORMATION (DESKTOP TO TABLET/MOBILE) */
+
+@media (max-width: 991.98px) {
+  .how-it-works-header {
+    margin-bottom: 50px;
+  }
+  
+  .hiw-title {
+    font-size: 2.35rem;
+  }
+
+  /* Transition line to vertical connecting track on left */
+  .timeline-line {
+    top: 0;
+    left: 40px;
+    width: 2px;
+    height: calc(100% - 120px);
+  }
+  
+  .timeline-line-progress {
+    background: linear-gradient(180deg, var(--color-primary, #4F46E5) 0%, var(--color-secondary, #14B8A6) 100%);
+  }
+
+  .timeline-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+    margin: 0;
+  }
+
+  .timeline-col {
+    width: 100%;
+    margin-bottom: 36px;
+    padding: 0;
+  }
+
+  .timeline-node-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Horizontal repositioning of connecting dot */
+  .timeline-connector-dot {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    left: 10px; /* Aligns with the 40px line due to left offset */
+    box-shadow: 0 0 0 6px #ffffff;
+  }
+
+  /* Large Step numbers positioned to float nicely */
+  .step-number-container {
+    top: -24px;
+    left: 70px;
+    font-size: 2.5rem;
+  }
+
+  /* Redefining text block to left alignment */
+  .timeline-card-content {
+    margin-left: 60px;
+    align-items: flex-start;
+    padding: 24px 28px;
+    text-align: left;
+    width: calc(100% - 60px);
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+  }
+
+  .step-icon-wrapper {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .how-it-works-section {
+    padding: 80px 0;
+  }
+
+  .hiw-title {
+    font-size: 1.85rem;
+  }
+
+  .timeline-line {
+    left: 28px;
+  }
+
+  .timeline-row {
+    padding-left: 10px;
+  }
+
+  .timeline-connector-dot {
+    left: 18px;
+  }
+
+  .timeline-card-content {
+    margin-left: 48px;
+    padding: 20px 22px;
+    width: calc(100% - 48px);
+    border-radius: 16px;
+  }
+
+  .step-number-container {
+    left: 56px;
+    font-size: 2.2rem;
+    top: -20px;
+  }
+}

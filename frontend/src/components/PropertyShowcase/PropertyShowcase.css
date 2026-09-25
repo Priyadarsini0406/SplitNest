@@ -1,0 +1,367 @@
+/* SplitNest Property Showcase Section styling */
+
+.property-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Background soft ambient glows */
+.prop-glow-1 {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.03) 0%, rgba(20, 184, 166, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.prop-glow-2 {
+  position: absolute;
+  bottom: -10%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.03) 0%, rgba(79, 70, 229, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/* Header style block */
+.property-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 64px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prop-tag {
+  display: inline-block;
+  background: rgba(20, 184, 166, 0.06);
+  border: 1px solid rgba(20, 184, 166, 0.12);
+  color: var(--color-secondary, #14B8A6);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.prop-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  letter-spacing: -1px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.prop-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.1rem;
+  color: var(--color-text, #475569);
+  line-height: 1.6;
+}
+
+/* Grid columns container */
+.property-grid {
+  position: relative;
+  z-index: 2;
+}
+
+/* Property card layout (rounded corners 16px, soft shadow) */
+.property-card {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(71, 85, 105, 0.07);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02),
+              0 1px 3px rgba(15, 23, 42, 0.01);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover lift effect */
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
+  border-color: rgba(79, 70, 229, 0.4) !important;
+}
+
+/* Image housing & Zoom effect */
+.property-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.property-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.06);
+}
+
+/* Floating tags inside image */
+.property-status-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 14px !important;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-weight: 600;
+  font-size: 0.72rem;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+}
+
+.badge-available {
+  background: rgba(20, 184, 166, 0.9) !important;
+  color: #ffffff;
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.9) !important;
+  color: #ffffff;
+}
+
+.badge-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse-dot 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+/* Interactive Fav Heart button */
+.property-fav-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fav-icon {
+  font-size: 1.05rem;
+  color: var(--color-text, #475569);
+  transition: all 0.3s ease;
+}
+
+.property-fav-btn:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+.property-fav-btn.favorited {
+  background: #ffffff;
+  border-color: rgba(244, 63, 94, 0.2);
+}
+
+.property-fav-btn.favorited .fav-icon {
+  color: #f43f5e;
+  fill: #f43f5e;
+}
+
+/* Property Type floating block */
+.property-type-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+/* Card Content body */
+.property-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Ratings element */
+.property-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.82rem;
+  margin-bottom: 10px;
+}
+
+.star-icon {
+  color: #F59E0B;
+  fill: #F59E0B;
+  font-size: 0.95rem;
+}
+
+.rating-val {
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+}
+
+.reviews-count {
+  color: var(--color-text, #475569);
+}
+
+/* Card Titles & Location styling */
+.property-card-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.property-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  color: var(--color-text, #475569);
+  margin-bottom: 24px;
+}
+
+.location-icon {
+  color: var(--color-primary, #4F46E5);
+  font-size: 0.95rem;
+}
+
+/* Footer splitting price & booking CTA button */
+.property-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid rgba(71, 85, 105, 0.08);
+  margin-top: auto;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.price-value {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-secondary, #14B8A6);
+  line-height: 1.1;
+}
+
+.price-label {
+  font-size: 0.72rem;
+  color: var(--color-text, #475569);
+}
+
+/* Book Now CTA Button */
+.btn-book-now {
+  background: transparent;
+  border: 1.5px solid var(--color-primary, #4F46E5);
+  color: var(--color-primary, #4F46E5);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-arrow {
+  transition: transform 0.2s ease;
+}
+
+.btn-book-now:hover {
+  background: var(--color-primary, #4F46E5);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.btn-book-now:hover .book-arrow {
+  transform: translateX(3px);
+}
+
+/* Responsive Grid overrides */
+
+@media (max-width: 991.98px) {
+  .prop-title {
+    font-size: 2.35rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .property-section {
+    padding: 80px 0;
+  }
+
+  .prop-title {
+    font-size: 1.85rem;
+  }
+
+  .property-card {
+    border-radius: 16px;
+  }
+
+  .property-card-body {
+    padding: 20px;
+  }
+
+  .property-image-wrapper {
+    height: 200px;
+  }
+}

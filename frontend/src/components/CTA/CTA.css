@@ -1,0 +1,220 @@
+/* SplitNest CTA Section styling */
+
+.cta-section {
+  position: relative;
+  padding: 80px 0 100px;
+  background-color: #ffffff;
+}
+
+/* Gradient card box (Primary Indigo to Secondary Teal) */
+.cta-card-gradient {
+  position: relative;
+  width: 100%;
+  padding: 80px 60px;
+  background: linear-gradient(135deg, var(--color-primary, #4F46E5) 0%, #3B82F6 45%, var(--color-secondary, #14B8A6) 100%);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(79, 70, 229, 0.28);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Floating shapes inside card */
+.cta-shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-shape-1 {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  top: -120px;
+  left: -80px;
+  animation: float-y-slow 8s ease-in-out infinite;
+}
+
+.cta-shape-2 {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  bottom: -40px;
+  right: 12%;
+  animation: rotate-shape 20s linear infinite;
+}
+
+.cta-shape-3 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  top: 10%;
+  right: -90px;
+  animation: float-y-medium 6s ease-in-out infinite 1s;
+}
+
+/* Inner glow point */
+.cta-glow-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Keyframes shapes animations */
+@keyframes rotate-shape {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Content block styling */
+.cta-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-heading {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.cta-subheading {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Action button configurations */
+.cta-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-primary, #4F46E5);
+  background-color: #ffffff;
+  border: none;
+  padding: 15px 36px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+  filter: brightness(1.02);
+}
+
+.btn-cta-primary:active {
+  transform: translateY(0);
+}
+
+.cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.btn-cta-primary:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+.btn-cta-secondary {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  padding: 14px 34px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cta-secondary:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.btn-cta-secondary:active {
+  transform: translateY(0);
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+
+@media (max-width: 991.98px) {
+  .cta-heading {
+    font-size: 2.75rem;
+  }
+  
+  .cta-card-gradient {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cta-heading {
+    font-size: 2.25rem;
+    letter-spacing: -1px;
+  }
+
+  .cta-subheading {
+    font-size: 1.05rem;
+  }
+
+  .cta-card-gradient {
+    padding: 50px 30px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta-heading {
+    font-size: 1.85rem;
+  }
+
+  .cta-subheading {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .cta-btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+}

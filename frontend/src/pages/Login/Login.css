@@ -1,0 +1,742 @@
+/* SplitNest Premium Login Page styling */
+
+.login-page-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  background-color: var(--color-bg, #F8FAFC);
+  overflow: hidden;
+  display: flex;
+}
+
+/* Background Soft Glows (Right Side backing) */
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.bg-glow-primary {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  right: -50px;
+  top: -50px;
+}
+
+.bg-glow-secondary {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  right: 15%;
+  bottom: -50px;
+}
+
+/* LEFT COLUMN (60%): DEEP GRADIENT & Startup Illustrations */
+.login-graphic-column {
+  position: relative;
+  background: linear-gradient(135deg, #1E1B4B 0%, #0F172A 100%);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glowing spots on left side */
+.graphic-glow-1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, rgba(79, 70, 229, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.graphic-glow-2 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(20, 184, 166, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.graphic-glow-3 {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* SVG Connecting lines */
+.svg-connecting-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content wrapper */
+.graphic-content-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Image shadow container */
+.illustration-holder-shadow {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 44px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3),
+              inset 0 0 40px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 10px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.graphic-illustration-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 34px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+/* Floating Glass Cards */
+.floating-glass-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  z-index: 5;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-glass-card:hover {
+  transform: scale(1.05) translateY(-5px) !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-icon-round {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.bg-success-glow {
+  background: rgba(20, 184, 166, 0.2);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.2);
+}
+
+.bg-primary-glow {
+  background: rgba(79, 70, 229, 0.25);
+  border: 1px solid rgba(79, 70, 229, 0.35);
+  box-shadow: 0 0 12px rgba(79, 70, 229, 0.2);
+}
+
+.bg-accent-glow {
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+
+.card-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-lbl {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card-val {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+/* Individual card positions */
+.card-rent-split {
+  top: 15%;
+  left: 2%;
+  animation: float-y-slow 7s ease-in-out infinite;
+}
+
+.card-nest-status {
+  bottom: 15%;
+  left: 5%;
+  animation: float-y-medium 5.5s ease-in-out infinite 0.7s;
+}
+
+.card-notify {
+  top: 25%;
+  right: -5%;
+  animation: float-y-fast 4.5s ease-in-out infinite 0.3s;
+}
+
+/* Floating Bubbles */
+.bubble-dec {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.88rem;
+  z-index: 3;
+}
+
+.bubble-credit-card {
+  bottom: 12%;
+  right: 25%;
+  color: var(--color-accent, #F59E0B);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+  animation: float-y-slow 6.2s ease-in-out infinite 0.4s;
+}
+
+.bubble-calendar {
+  top: 8%;
+  right: 30%;
+  color: var(--color-secondary, #14B8A6);
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.15);
+  animation: float-y-medium 5s ease-in-out infinite 1.2s;
+}
+
+.bubble-home-icon {
+  bottom: 40%;
+  right: -10%;
+  color: var(--color-primary, #4F46E5);
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.15);
+  animation: float-y-fast 4.2s ease-in-out infinite 0.9s;
+}
+
+/* Float Animations Keyframes */
+@keyframes float-y-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-y-medium {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-y-fast {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* RIGHT COLUMN (40%): THE LOGIN INTERACTION FORM */
+.login-form-column {
+  position: relative;
+  padding: 100px 30px 40px;
+  height: 100%;
+  background: transparent;
+  z-index: 2;
+  overflow-y: auto;
+}
+
+/* Top logo branding block */
+.login-top-logo {
+  position: absolute;
+  top: 36px;
+  left: 48px;
+  z-index: 10;
+}
+
+.login-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.login-logo-mark {
+  display: flex;
+  align-items: center;
+  background: rgba(79, 70, 229, 0.06);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+
+.brand-icon-home {
+  font-size: 1.15rem;
+  color: var(--color-primary, #4F46E5);
+}
+
+.brand-icon-users {
+  font-size: 0.95rem;
+  color: var(--color-secondary, #14B8A6);
+}
+
+.brand-split-line {
+  width: 2px;
+  height: 14px;
+  background: linear-gradient(180deg, var(--color-primary, #4F46E5), var(--color-secondary, #14B8A6));
+  transform: rotate(15deg);
+  margin: 0 2px;
+}
+
+.brand-text {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--color-heading, #0F172A);
+}
+
+.brand-text-nest {
+  background: linear-gradient(135deg, var(--color-primary, #4F46E5) 0%, var(--color-secondary, #14B8A6) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium Glass Login Card (rounded 24px) */
+.login-glass-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 24px;
+  padding: 44px 40px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.05),
+              inset 0 1px 1px #ffffff;
+}
+
+.login-card-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-heading, #0F172A);
+  letter-spacing: -0.8px;
+  margin-bottom: 8px;
+}
+
+.login-card-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text, #475569);
+  margin-bottom: 0;
+}
+
+/* ROLE TOGGLE SELECTOR */
+.role-selector-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  background: rgba(15, 23, 42, 0.03);
+  padding: 6px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.02);
+}
+
+.role-toggle-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-text, #475569);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.role-icon-box {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Active selector state */
+.role-toggle-card.active {
+  background-color: #ffffff;
+  color: var(--color-primary, #4F46E5);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.role-toggle-card:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-heading, #0F172A);
+}
+
+/* INPUT FORMS FIELDS */
+.login-input-label {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-heading, #0F172A);
+  margin-bottom: 6px;
+}
+
+.input-with-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon-left {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: rgba(71, 85, 105, 0.4);
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.login-custom-input {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(71, 85, 105, 0.12) !important;
+  border-radius: 10px !important;
+  padding: 11px 14px 11px 40px !important; /* Extra padding left for the icon */
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.9rem !important;
+  color: var(--color-heading, #0F172A) !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.login-custom-input::placeholder {
+  color: rgba(71, 85, 105, 0.4) !important;
+}
+
+.login-custom-input:focus {
+  border-color: var(--color-primary, #4F46E5) !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12) !important;
+}
+
+.login-custom-input:focus + .input-icon-left {
+  color: var(--color-primary, #4F46E5);
+}
+
+/* Password eye button */
+.password-input {
+  padding-right: 42px !important; /* Space for eye */
+}
+
+.password-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: rgba(71, 85, 105, 0.45);
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--color-heading, #0F172A);
+}
+
+/* Remember me & Forgot Link */
+.login-remember-check label.form-check-label {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.82rem;
+  color: var(--color-text, #475569);
+  cursor: pointer;
+  user-select: none;
+}
+
+.login-remember-check input.form-check-input {
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.login-remember-check input.form-check-input:checked {
+  background-color: var(--color-primary, #4F46E5);
+  border-color: var(--color-primary, #4F46E5);
+}
+
+.login-forgot-link {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary, #4F46E5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-forgot-link:hover {
+  color: var(--color-secondary, #14B8A6);
+  text-decoration: underline;
+}
+
+/* Gradient Sign in button */
+.btn-login-gradient-submit {
+  width: 100%;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-primary, #4F46E5) 0%, var(--color-secondary, #14B8A6) 100%);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.22);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 8px;
+}
+
+.btn-login-gradient-submit:hover {
+  box-shadow: 0 8px 22px rgba(79, 70, 229, 0.35);
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn-login-gradient-submit:active {
+  transform: translateY(0);
+}
+
+/* DIVIDER LINE */
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: 28px 0;
+  gap: 12px;
+  user-select: none;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(71, 85, 105, 0.08);
+}
+
+.divider-text {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  color: var(--color-text, #475569);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* SOCIAL LOGIN BUTTONS */
+.social-logins-group {
+  display: flex;
+  gap: 12px;
+}
+
+.social-login-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(71, 85, 105, 0.12);
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-heading, #0F172A);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-login-btn:hover {
+  background-color: rgba(15, 23, 42, 0.02);
+  border-color: rgba(71, 85, 105, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+}
+
+.social-login-btn:active {
+  transform: translateY(0);
+}
+
+.social-icon {
+  font-size: 1.15rem;
+}
+
+.text-microsoft-blue {
+  color: #0078d4;
+}
+
+/* CARD FOOTER LINKS */
+.login-card-footer {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  color: var(--color-text, #475569);
+}
+
+.register-link-accent {
+  color: var(--color-primary, #4F46E5);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.register-link-accent:hover {
+  color: var(--color-secondary, #14B8A6);
+  text-decoration: underline;
+}
+
+/* FADE-IN AND SLIDE-UP TIMINGS */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.15s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+
+@media (max-width: 1199.98px) {
+  .login-glass-card {
+    padding: 36px 30px;
+  }
+  
+  .illustration-holder-shadow {
+    width: 280px;
+    height: 280px;
+  }
+
+  .card-rent-split { left: 0%; top: 12%; }
+  .card-nest-status { left: 2%; bottom: 12%; }
+  .card-notify { right: -2%; top: 22%; }
+}
+
+@media (max-width: 991.98px) {
+  .login-page-container {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 16px 60px;
+  }
+
+  .login-form-column {
+    padding: 0;
+    overflow-y: visible;
+  }
+
+  .login-top-logo {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .login-glass-card {
+    max-width: 460px;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .login-page-container {
+    padding-top: 90px;
+  }
+
+  .login-glass-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .login-card-title {
+    font-size: 1.55rem;
+  }
+
+  .social-logins-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .social-login-btn {
+    width: 100%;
+  }
+
+  .login-top-logo {
+    top: 24px;
+  }
+
+  .brand-text {
+    font-size: 1.2rem;
+  }
+}

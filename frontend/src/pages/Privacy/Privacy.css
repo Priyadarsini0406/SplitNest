@@ -1,0 +1,66 @@
+.policy-page-wrapper {
+  background-color: #0b0f19;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  color: #f8fafc;
+}
+
+.policy-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Background flows */
+.policy-page-wrapper .bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.12;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.policy-page-wrapper .bg-glow-primary {
+  background: radial-gradient(circle, #4f46e5 0%, rgba(79, 70, 229, 0) 70%);
+  top: 5%;
+  left: -150px;
+}
+
+.policy-page-wrapper .bg-glow-secondary {
+  background: radial-gradient(circle, #14b8a6 0%, rgba(20, 184, 166, 0) 70%);
+  bottom: 15%;
+  right: -150px;
+}
+
+/* Glass card styling */
+.policy-glass-card {
+  background: rgba(30, 41, 59, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.policy-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  margin: 0 auto;
+}
+
+.policy-content p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}

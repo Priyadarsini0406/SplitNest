@@ -1,0 +1,392 @@
+/* SplitNest Why Choose Section styling */
+
+.why-choose-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: var(--color-bg, #F8FAFC);
+  overflow: hidden;
+}
+
+/* Background glows */
+.why-glow-1 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.why-glow-2 {
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/* LEFT COLUMN: GRAPHIC & GLASS CARDS */
+.why-graphic-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-illustration-container {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Orbit circle background */
+.why-orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 108%;
+  height: 108%;
+  border: 1.5px dashed rgba(20, 184, 166, 0.12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-ring 45s linear infinite;
+  pointer-events: none;
+}
+
+/* Central soft glow */
+.why-glow-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Image wrapper */
+.why-image-wrapper {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  border-radius: 36px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.05),
+              inset 0 0 30px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 8px;
+  z-index: 2;
+  animation: float-y-medium 6s ease-in-out infinite;
+}
+
+.why-illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Floating Glass Cards */
+.why-glass-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04),
+              inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.why-glass-card:hover {
+  transform: scale(1.05) translateY(-4px) !important;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.1);
+  border-color: rgba(79, 70, 229, 0.15);
+}
+
+.why-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+}
+
+.why-card-content {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.why-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--color-text, #475569);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.why-value {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  margin-bottom: 0;
+}
+
+/* Individual card position details */
+.why-card-secure {
+  top: 14%;
+  left: -5%;
+  animation: float-y-slow 7s ease-in-out infinite;
+}
+
+.why-card-trust {
+  bottom: 14%;
+  right: -5%;
+  animation: float-y-medium 5.8s ease-in-out infinite 0.5s;
+}
+
+/* Decorative utility bubbles */
+.why-bubble {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  z-index: 3;
+}
+
+.bubble-home {
+  bottom: 12%;
+  left: 20%;
+  color: var(--color-primary, #4F46E5);
+  animation: float-y-slow 6s ease-in-out infinite 0.3s;
+}
+
+.bubble-heart {
+  top: 8%;
+  right: 18%;
+  color: var(--color-secondary, #14B8A6);
+  animation: float-y-fast 4.2s ease-in-out infinite 0.8s;
+}
+
+/* RIGHT COLUMN: ADVANTAGES LIST */
+.why-header {
+  margin-bottom: 40px;
+}
+
+.why-tag {
+  display: inline-block;
+  background: rgba(79, 70, 229, 0.06);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  color: var(--color-primary, #4F46E5);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.why-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  letter-spacing: -1px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.why-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  color: var(--color-text, #475569);
+  line-height: 1.6;
+}
+
+/* Advantages Grid item */
+.advantage-item {
+  position: relative;
+  width: 100%;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(71, 85, 105, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.01);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.advantage-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(79, 70, 229, 0.12);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+}
+
+.advantage-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Advantage icon colors variations */
+.adv-indigo {
+  background: rgba(79, 70, 229, 0.06);
+  color: var(--color-primary, #4F46E5);
+}
+
+.adv-teal {
+  background: rgba(20, 184, 166, 0.06);
+  color: var(--color-secondary, #14B8A6);
+}
+
+.adv-amber {
+  background: rgba(245, 158, 11, 0.06);
+  color: var(--color-accent, #F59E0B);
+}
+
+.advantage-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-heading, #0F172A);
+  margin-bottom: 8px;
+}
+
+.advantage-description {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text, #475569);
+  margin-bottom: 0;
+}
+
+/* Hover icons color transitions */
+.advantage-item:hover .advantage-icon-wrapper.adv-indigo {
+  background: var(--color-primary, #4F46E5);
+  color: #ffffff;
+}
+
+.advantage-item:hover .advantage-icon-wrapper.adv-teal {
+  background: var(--color-secondary, #14B8A6);
+  color: #ffffff;
+}
+
+.advantage-item:hover .advantage-icon-wrapper.adv-amber {
+  background: var(--color-accent, #F59E0B);
+  color: #ffffff;
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+
+@media (max-width: 991.98px) {
+  .why-title {
+    font-size: 2.2rem;
+  }
+
+  .why-header {
+    text-align: center;
+  }
+
+  .why-illustration-container {
+    height: 400px;
+    max-width: 400px;
+    margin: 40px auto 0;
+  }
+
+  .why-image-wrapper {
+    width: 210px;
+    height: 210px;
+    border-radius: 28px;
+  }
+
+  .why-card-secure { left: 0%; top: 12%; }
+  .why-card-trust { right: 0%; bottom: 12%; }
+  
+  .bubble-home { left: 24%; }
+  .bubble-heart { right: 24%; }
+}
+
+@media (max-width: 575.98px) {
+  .why-choose-section {
+    padding: 80px 0;
+  }
+
+  .why-title {
+    font-size: 1.85rem;
+  }
+
+  .advantage-item {
+    padding: 22px 20px;
+  }
+
+  .why-illustration-container {
+    height: 320px;
+    max-width: 320px;
+  }
+
+  .why-image-wrapper {
+    width: 170px;
+    height: 170px;
+  }
+
+  .why-glass-card {
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+
+  .why-icon-box {
+    width: 26px;
+    height: 26px;
+    font-size: 0.85rem;
+  }
+
+  .why-label {
+    font-size: 0.55rem;
+  }
+
+  .why-value {
+    font-size: 0.75rem;
+  }
+
+  .why-card-secure { left: -4%; }
+  .why-card-trust { right: -4%; }
+
+  .why-bubble { display: none; }
+}

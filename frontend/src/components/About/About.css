@@ -1,0 +1,297 @@
+/* SplitNest About Section styling */
+
+.about-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Background glows */
+.about-glow-1 {
+  position: absolute;
+  top: 15%;
+  left: -10%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.about-glow-2 {
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/* Header style block */
+.about-header {
+  margin-bottom: 40px;
+}
+
+.about-tag {
+  display: inline-block;
+  background: rgba(79, 70, 229, 0.06);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  color: var(--color-primary, #4F46E5);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-heading, #0F172A);
+  letter-spacing: -1px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.about-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--color-text, #475569);
+  max-width: 580px;
+}
+
+/* Grid layout & Cards design */
+.about-grid {
+  margin-top: 12px;
+}
+
+.about-glass-card {
+  position: relative;
+  width: 100%;
+  padding: 32px 28px;
+  background: rgba(248, 250, 252, 0.55);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.02),
+              0 1px 2px rgba(15, 23, 42, 0.01);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.about-glass-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(79, 70, 229, 0.15);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.04);
+}
+
+.about-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.bg-primary-light { background: rgba(79, 70, 229, 0.08); }
+.bg-secondary-light { background: rgba(20, 184, 166, 0.08); }
+
+.about-card-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-heading, #0F172A);
+  margin-bottom: 8px;
+}
+
+.about-card-desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-text, #475569);
+  margin-bottom: 0;
+}
+
+/* Hover icon reactions */
+.about-glass-card:hover .about-icon-circle.bg-primary-light {
+  background: var(--color-primary, #4F46E5);
+  color: #ffffff !important;
+  transform: rotate(-6deg) scale(1.05);
+}
+
+.about-glass-card:hover .about-icon-circle.bg-secondary-light {
+  background: var(--color-secondary, #14B8A6);
+  color: #ffffff !important;
+  transform: rotate(-6deg) scale(1.05);
+}
+
+/* RIGHT COLUMN: ILLUSTRATION */
+.about-image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-illustration-wrapper {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  max-width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Orbit background ring */
+.about-orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 105%;
+  height: 105%;
+  border: 1.5px dashed rgba(79, 70, 229, 0.12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-ring 40s linear infinite;
+  pointer-events: none;
+}
+
+/* Image container */
+.about-img-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 36px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 8px;
+  z-index: 2;
+  animation: float-y-medium 6s ease-in-out infinite;
+}
+
+.about-illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Floating overlay glass badge */
+.about-floating-badge {
+  position: absolute;
+  bottom: 12%;
+  right: -5%;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+  z-index: 5;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-heading, #0F172A);
+  animation: float-y-slow 7s ease-in-out infinite 0.5s;
+}
+
+.badge-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-secondary, #14B8A6);
+  animation: pulse-badge 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.4; }
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+
+@media (max-width: 991.98px) {
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-header {
+    text-align: center;
+  }
+
+  .about-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-illustration-wrapper {
+    height: 380px;
+    max-width: 380px;
+    margin: 40px auto 0;
+  }
+
+  .about-img-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-floating-badge {
+    right: 5%;
+    bottom: 8%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .about-title {
+    font-size: 1.85rem;
+  }
+
+  .about-glass-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .about-illustration-wrapper {
+    height: 300px;
+    max-width: 300px;
+  }
+
+  .about-img-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-floating-badge {
+    padding: 6px 14px;
+    font-size: 0.72rem;
+    right: 2%;
+    bottom: 5%;
+  }
+}

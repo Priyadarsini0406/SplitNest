@@ -1,0 +1,12 @@
+const express = require("express");
+const { createProperty, getProperties, getPropertyById, updateProperty, updatePropertyStatus, deleteProperty } = require("../controllers/property.controller");
+const { protect, requireRole } = require("../middlewares/auth.middleware");
+const router = express.Router();
+router.use(protect, requireRole("owner"));
+router.get("/", getProperties);
+router.get("/:id", getPropertyById);
+router.post("/", createProperty);
+router.put("/:id", updateProperty);
+router.patch("/:id/status", updatePropertyStatus);
+router.delete("/:id", deleteProperty);
+module.exports = router;

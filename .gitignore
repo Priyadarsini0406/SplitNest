@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Environment files and local secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.example
+
+# Private keys and credential files
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Build output and coverage
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
